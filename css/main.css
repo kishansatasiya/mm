@@ -1,0 +1,634 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/*
+colors
+
+$tumbleweed: #dda887ff;
+$cafe-au-lait: #a78068ff;
+$black-olive: #444a44ff;
+$white: #fefffeff;
+$cardinal: #b03240ff;
+
+
+$gradient-top: linear-gradient(0deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-right: linear-gradient(90deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-bottom: linear-gradient(180deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-left: linear-gradient(270deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-top-right: linear-gradient(45deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-bottom-right: linear-gradient(135deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-top-left: linear-gradient(225deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-bottom-left: linear-gradient(315deg, #dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+$gradient-radial: radial-gradient(#dda887ff, #a78068ff, #444a44ff, #fefffeff, #b03240ff);
+
+font-family: 'Lato', sans-serif;
+  font-family: 'Prata', serif;
+  
+
+*/
+body 
+{
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;     
+}
+
+.navbar-nav > li > a {
+  font-size: 13px;
+  color: #000; 
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-family: 'Lato', sans-serif;
+}
+.bg-light {
+  background-color: #ffe1d4!important;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0);
+}
+.home-section {
+  padding: 30px 0;
+}
+/*home services*/
+.item-sev  {
+  position:relative;
+  margin-bottom:20px;
+
+}
+a.bg-link {
+
+  
+  box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+  display: block;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.bride.bg-link {
+
+  background-image: url(../img/services/webp/bridal.webp);
+}
+
+.bride-skin.bg-link {
+
+  background-image: url(../img/services/webp/bridal.webp);
+}
+
+.bride-skin.bg-link {
+
+  background-image: url(../img/services/webp/skin-care.webp);
+}
+
+.co-bride.bg-link {
+
+  background-image: url(../img/services/webp/co-bride.webp);
+}
+
+
+
+span.sev-title {
+  position: absolute;
+  bottom: 0;
+  padding: 12px 15px;
+  background: #ffffff;
+  width: 100%;
+  color: #000;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+span.sev-title i {
+  font-size: 13px;
+  vertical-align: top;
+  font-weight: 600;
+  color: #5e655e; 
+  text-transform: none;
+}
+.whatsapp-ico {
+  background-image: url(../img/icons/whatsapp.svg);
+  width: 48px;
+  height: 48px;
+  display: block;
+  position: absolute;
+  bottom: 13px;
+  right: 11px;
+}
+
+.sec-title {
+  font-family: 'Prata', serif;
+}
+.sec-main-title {
+  font-family: 'Prata', serif;
+  text-align: center;
+  
+}
+.home-section.about-us .sec-main-title
+{
+  font-size: 23px;
+}
+.home-section.about-us .sec-main-sub br{
+display: none;
+}
+.sec-main-sub {
+text-align: center;
+}
+.home-section.services 
+{
+background: #ebcdb9;
+
+}
+
+.home-section.learn {
+  background: #e8c1c1;
+  color: #000;
+}
+/*home services ends*/
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(0 0 0);
+  padding-left: 44px;
+  margin-left: 23px;
+}
+.navbar-light .navbar-nav .nav-link.work {
+  padding-left: 56px;
+}
+p.footer-note {
+  background: #b03240;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 500;
+  color: #fff;
+  margin:0;
+}
+.home-section.work
+{
+  background: #f4e3d8;
+  color: #212529;
+}
+.navbar-nav .services {
+  background: url('../img/icons/services-beautician.svg') no-repeat;
+  }
+.navbar-nav .colab {
+background: url('../img/icons/film-camera.svg') no-repeat;
+}
+.navbar-nav .work {
+  background: url('../img/icons/profile-website.svg') no-repeat;
+}
+.navbar-nav .learn {
+  background: url('../img/icons/woman-makeup.svg') no-repeat ;
+}
+.navbar-nav .bridal {
+  background: url('../img/icons/bride.svg') no-repeat;
+}
+.navbar-nav .abt {
+  background: url('../img/icons/face-massage.svg') no-repeat;
+}
+.navbar-nav .cont {
+  background: url('../img/icons/reservation-completed.svg') no-repeat;
+}
+.insta-link {
+  background: url(../img/icons/instagram-color.svg) no-repeat;
+  padding-left: 31px;
+  height: 25px;
+  display: inline-block;
+}
+section.home-section.about-us {
+  background:url('../img/icons/simple-shine.svg'); 
+}
+.home-section.services .card-title {
+  font-weight:700 ;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+section.home-section.featured {
+  background: #b03240;
+}
+p.hero-title {
+  font-family: 'Prata';
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 1px #080808;
+}
+section.home-section.featured .view {
+  background: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+li.nav-item {
+  margin-bottom: 20px;
+}
+.navbar-toggler {
+margin-left:10px;
+}
+.navbar-brand {
+  max-width: 141px;
+}
+.btn.call
+{
+  background: #b03240;
+  color: #fff;
+}
+.site-tages span {
+  border: 2px solid #00000040;
+  padding: 3px 5px;
+  /* line-height: 23.5px; */
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+
+/* lipstick page*/
+
+.bt-primary {
+  background: #b03240;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.bt-primary:hover {
+  color: #fff;  
+}
+.bg-wrap
+{
+background: #f9e0e0;
+padding: 15px;
+box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+}
+
+.lipstick-banner {
+  background: #ffe1d4ad;
+  padding: 60px 0;
+}
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Prata';
+  color: #b1282a;
+}
+.title-sub {
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+.round {
+  border-radius: 40px !important;
+}
+ul.list-features {
+  font-size: 21px; 
+}
+.title-sub-price {
+  font-size: 26px;
+  font-family: 'Prata';
+  font-weight: bold;
+}
+.lipstick-banner.featured-section
+{
+  font-size: 15px;
+}
+.lipstick-banner.featured-section span.lbl {
+  font-weight: bold;
+  font-size: 15px;
+  display: block;  
+  letter-spacing: 0.04em;
+}
+.color-list {
+  list-style: none;
+}
+.color-list li{
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+.color-list span {
+  box-shadow: 1px 1px 2px 1px;
+  display: block;
+  width: 65px;
+  height: 65px;  
+  border-radius: 50%;
+}
+/* lipstick page*/
+
+@media (min-width: 576px) {
+
+
+ }
+
+
+@media (min-width: 768px) {
+  p.hero-title {
+    font-size: 48px;
+   }
+   .title {
+    font-size: 57px;
+  }
+
+ }
+@media (min-width: 992px) {
+  p.hero-title {
+    font-size: 62px;
+   }
+   .bt-primary { 
+    font-size: 27px;
+   }
+   .home-section {
+     padding-top: 78px;
+   }
+   .title-sub-price {
+    font-size: 41px;
+   }
+   .bg-wrap {
+     padding: 45px;
+   }
+   .lipstick-banner.featured-section span.lbl {
+     font-size: 22px;
+   }
+   .color-list span {
+    width: 100px;
+    height: 100px;     
+  }
+}
+
+
+@media (min-width: 1200px) {
+p.hero-title {
+  font-size: 62px;
+ }
+
+ li.nav-item { 
+  margin-bottom:0;
+ }
+}
+@media (min-width: 1400px) {
+
+  p.hero-title {
+    font-size: 70px;
+   }
+
+ }
