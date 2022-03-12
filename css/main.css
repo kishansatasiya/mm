@@ -379,6 +379,8 @@ span.sev-title i {
 
 .sec-title {
   font-family: 'Prata', serif;
+   text-align: center;
+    margin-bottom: 65px;
 }
 .sec-main-title {
   font-family: 'Prata', serif;
@@ -424,8 +426,15 @@ p.footer-note {
 }
 .home-section.work
 {
-  background: #f4e3d8;
+
   color: #212529;
+}
+
+.home-section.work .item-work .img-fluid 
+{
+   border-radius: 50% 3px 50% 0;
+    border: 2px solid #b03240;
+       margin-bottom: 39px
 }
 .navbar-nav .services {
   background: url('../img/icons/services-beautician.svg') no-repeat;
