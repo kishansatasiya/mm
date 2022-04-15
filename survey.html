@@ -1,0 +1,15 @@
+<script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+<script>
+    window.renderOptIn = function () {
+        window.gapi.load('surveyoptin', function () {
+            window.gapi.surveyoptin.render(
+                {
+                    "merchant_id": "561136003",
+                    "order_id": "32121321",
+                    "email": "satasiya.kishan122@gmail.com",
+                    "delivery_country": "IN",
+                    'estimated_delivery_date': "2023-04-15"
+                });
+        });
+    };
+</script>
