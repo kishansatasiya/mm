@@ -284,12 +284,13 @@ $gradient-radial: radial-gradient(#dda887ff, #a78068ff, #444a44ff, #fefffeff, #b
 
 font-family: 'Lato', sans-serif;
   font-family: 'Prata', serif;
+  'Fira Sans', sans-serif;
   
 
 */
 body 
 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 1rem;     
 }
 
@@ -302,7 +303,12 @@ body
   font-family: 'Lato', sans-serif;
 }
 .bg-light {
-  background-color: #ffe1d4!important;
+  background-color: #fff!important;
+}
+
+nav.navbar
+{
+	box-shadow: 6px 1px 3px -2px #000;
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgb(0 0 0);
@@ -399,15 +405,76 @@ text-align: center;
 }
 .home-section.services 
 {
-background: #ebcdb9;
+background: #fffdf1;
 
 }
+
+.home-banner {
+	padding:12px 0px 25px 0px;
+	
+}
+.home-banner .card img {	
+	border-radius:8px;
+
+}
+.home-banner .card-body {
+	padding:9px 0px 0px;
+}
+.home-banner .card  {
+	text-align:center;
+	border:none;
+}
+.home-banner .card-title { 
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	text-align:left;
+	padding-left:10px;
+}
+
 
 .home-section.learn {
   background: #e8c1c1;
   color: #000;
 }
 /*home services ends*/
+
+
+/* PRICE MENU*/
+
+.main-service-ul {
+	list-style:none;
+	text-align:left;
+  padding-bottom:100px;
+}
+
+.main-service-ul > li {
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 8%);
+    border: 1px solid #e8e8e8;
+	margin-bottom:20px;
+	padding: 10px;
+}
+
+.main-service-ul .serv-title {
+	font-weight:500;
+}
+.main-service-ul .serv-price {
+	display: block;
+}
+.add-to-cart.button-26 {
+  display: block;
+}
+.add-to-cart.button-26:hover {
+  color:white;
+}
+
+
+
+
+/**/
 .navbar-light .navbar-nav .nav-link {
   color: rgb(0 0 0);
   padding-left: 44px;
@@ -498,16 +565,20 @@ margin-left:10px;
 }
 .btn.call
 {
-  background: #b03240;
-  color: #fff;
+  background: #000000;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Fira Sans', sans-serif;
+    letter-spacing: 0.05em;
+	font-weight: 500;
+	padding:1px;
 }
-.site-tages span {
-  border: 2px solid #00000040;
-  padding: 3px 5px;
-  /* line-height: 23.5px; */
-  font-size: 13px;
-  margin-bottom: 4px;
-  display: inline-block;
+.offer-line {
+  font-size: 12px; 
+  letter-spacing: 0.09em;
+  color: #b03240;
+  border: 1px dashed;
+  padding: 6px;
 }
 
 
@@ -582,12 +653,125 @@ ul.list-features {
   height: 65px;  
   border-radius: 50%;
 }
+
+/* shoping cart*/
+
+/* CSS */
+.button-26 {
+  appearance: button;
+  background-color: #1652F0;
+  border: 1px solid #1652F0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;  
+  font-size: 14px;
+  line-height: 1.15;
+  overflow: visible;
+  padding: 12px 16px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+}
+
+.button-26:disabled {
+  opacity: .5;
+}
+
+.button-26:focus {
+  outline: 0;
+  color#fff !important;
+}
+a.button-26:focus {
+	color:#fff;
+}
+.button-26:hover {
+  background-color: #0A46E4;
+  border-color: #0A46E4;
+}
+
+.button-26:active {
+  background-color: #0039D7;
+  border-color: #0039D7;
+}
+
+.cart-summary {
+	position: fixed;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    background: #fff;
+    padding: 100px;
+	border-radius: 2px;
+	box-shadow: 0 1px 50px 0 rgb(0 0 0 / 34%);
+	border: 1px solid #e8e8e8;	
+    padding: 20px;	
+
+
+}
+ul#show-cart {
+    max-height: 339px;
+    overflow-y: scroll;
+}
+.book-sec input[type="telephone"] {
+	height: 50px;
+    width: 300px;
+	
+}
+.book-sec .button-26 {
+	font-size:20px;	
+}
+
+.cart-summary  input.item-count {
+	
+	max-width:60px;
+	display:block;
+	
+}
+.cart-summary ul {
+	padding:0;
+}
+.cart-summary ul li {
+    list-style: none;
+    padding: 10px;    
+    border: 1px solid #d1d1d1;
+	margin-bottom:10px;
+}
+.cart-summary-short {
+	position:fixed;
+	left:10%;
+	right:10%;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px 0 rgb(0 0 0 / 8%);
+	border: 1px solid #e8e8e8;	
+	padding: 10px;
+	bottom:0;
+	background:#fff;
+	z-index:9999;
+	text-align:center;
+	
+}
+.book-sec {
+	text-align:center;
+}
+.book-sec input {
+	margin-bottom:10px;
+	
+}
+.book-sec .button-26
+{
+	min-width:215px;
+}
+#closecart{
+	background:#000;
+}
+
 /* lipstick page*/
-
-@media (min-width: 576px) {
-
-
- }
 
 
 @media (min-width: 768px) {
@@ -622,6 +806,9 @@ ul.list-features {
     width: 100px;
     height: 100px;     
   }
+  .cart-summary {
+    padding: 60px;	
+	}
 }
 
 
@@ -629,6 +816,9 @@ ul.list-features {
 p.hero-title {
   font-size: 62px;
  }
+ .cart-summary {
+    padding: 100px;	
+	}
 
  li.nav-item { 
   margin-bottom:0;
