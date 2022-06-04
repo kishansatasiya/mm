@@ -23,13 +23,7 @@
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
-  <script src="https://code.jquery.com/jquery-2.1.3.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>  
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131384367-2"></script>
- <script src="js/shoppingCart.js"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -671,12 +665,12 @@
        required placeholder="Mobile Number"/>-->
 			
 
-			 <input type="submit" id="cnf-book" value="Confirm Booking" class="button-26"> 
-			 <br>It will redirect to whatschat with your booking details on our whatsapp business account. 
+			 <input type="submit" id="cnf-book" value="Confirm Booking" class="button-26">  <input type="button" value="Continue to website" id ="closecart" class="button-26">
+			 <br>"Confirm Booking" will redirect you to our whatsapp business account chat.
 			 <br><a href="tel:8238878332">Need Help for Booking ?</a></br><br>	
 			
 			 </form>
-			 <input type="button" value="Continue to website" id ="closecart" class="button-26">
+			
 			</div>	
     </div>
 	
@@ -685,7 +679,16 @@
             <div>Total Cart:₹<span id="total-cart"></span> / <span id="count-cart">X</span> items <input type="button" value="View Your Booking list" id ="viewlist" class="button-26"></div>
 			
 	</div>
-			
+	
+	  <script src="https://code.jquery.com/jquery-2.1.3.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>  
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131384367-2"></script>
+ <script src="js/shoppingCart.js"></script>
+ 
+ 
 	<script>
 		$(function() {
             $(".add-to-cart").click(function(event){
