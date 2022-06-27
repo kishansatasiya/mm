@@ -654,6 +654,7 @@ ul.list-features {
   border-radius: 50%;
 }
 
+
 /* shoping cart*/
 
 /* CSS */
@@ -783,6 +784,7 @@ ul#show-cart {
 
 .price-list .bg-primary {
     background-color: #b03240 !important;
+	letter-spacing: 0.2em;
 }
 .price-list h3.pl-heading {
     background: #ffd786;
