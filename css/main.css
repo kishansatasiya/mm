@@ -797,7 +797,7 @@ ul#show-cart {
     padding-bottom: 8px;
     font-weight:normal;
     background: linear-gradient(to right,#BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 1px #000;
     color: #000000 !important;
 }
 .list-group-item:first-child {
